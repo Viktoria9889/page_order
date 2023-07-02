@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+
+    <div class="nav">
+        <%- include('partials/nav'); %>
+    </div>
+    <div class="order_list">
+        <h1>Замовлення</h1>
+        <div class="">
+            <ol>
+                <% allOrder.forEach((newOrder)=> { %>
+                    <li>
+                        Товар:<strong>
+                            <%= newOrder.itemPage %>
+                        </strong> <br>
+                        Кількість:<strong>
+                            <%= newOrder.amount %>
+                        </strong> <br>
+                        Ім'я:<strong>
+                            <%= newOrder.yourName %>
+                        </strong> <br>
+                        Фото:<strong>
+                            <%= newOrder.photoUrl %>
+                        </strong> <br>
+                    </li>
+                    <button data-id="<%= newOrder.id %>">delate</button>
+                    <% }); %>
+            </ol>
+        </div>
+    </div>
+
+
+    <script src="./js/basket.js"></script>
+</body>
+
+
+</html>

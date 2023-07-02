@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+
+    <div class="nav">
+        <%- include('partials/nav'); %>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="block2">
+                <form action="/add-order" class="form" enctype="multipart/form-data" method="post">
+                    <div class="form_wraper">
+                        <div class="block1">
+                            <div class="box"><img
+                                    src="https://www.cevagraf.coop/blog/wp-content/uploads/2021/04/din-a3-medidas-a3.jpg"
+                                    class="photo"></div>
+                        </div>
+                        <div class="block2">
+                            <div class="radio">
+                                <input type="radio" id="A3" name="itemPage" value="A3">
+                                <label for="A3">A3</label>
+                                <br>
+                                <input type="radio" id="A4" name="itemPage" value="A4">
+                                <label for="A4">A4</label>
+                                <br>
+                                <input type="radio" id="A5" name="itemPage" value="A5">
+                                <label for="A5">А5</label>
+                            </div>
+                            <br>
+                            <div class="sum">
+                                <button class="plus">+ </button>
+                                <div class="amount">0</div>
+                                <button class="minus"> - </button>
+                                <br>
+                            </div>
+                                <input type="text" placeholder="your name.." name="yourName">
+                                    <label for="photo">Ваше фото:</label>
+                                    <input type="file" name="photo">
+                                <button type="submit" class="submit">Push</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <br>
+    </div>
+    <script src="./js/order.js"></script>
+</body>
+
+</html>
